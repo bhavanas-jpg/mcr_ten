@@ -1,11 +1,16 @@
 const reducer =()=>{
     const initialState ={
-    place : "Bangalore"
+    place : "Bangalore",
+    sum : 0
     }
     
     const dataReducer =(state, action)=>{
     switch(action.type){
-        
+        case "ADD":
+            return {
+                ...state,
+                sum : state.sum + action.payload
+            }
     }
     }
     
